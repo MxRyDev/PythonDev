@@ -15,7 +15,7 @@
 
 #Imports libraries
 from tkinter import *
-import pygame
+#import pygame
 from random import randint
 
 #INIT CLASSES:
