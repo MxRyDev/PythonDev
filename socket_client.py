@@ -4,11 +4,26 @@
 
 import socket
 
-HOST = '127.0.0.1'
+HOST = '25.197.28.165'
 PORT = 50005
+#USR = input("Username?: \n>>")
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
-s.sendall(b"Hello World")
-data = s.recv(1024)
-s.close()
-print ("Recieved", repr(data))
+
+while True:
+    
+    
+    message = input("MESSAGE:\n>>")
+    #message = USR + ': ' + message
+    message = str.encode(message)   
+    s.sendall(message)
+    
+    #if s.recv(1024):
+        #data = s.recv(1024)
+        #data = data.decode(encoding = 'UTF-8')
+        #print('>>' + data)
+    #else:
+        #print("no new messages")
+        
+        
+    #s.close()
